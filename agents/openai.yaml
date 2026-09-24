@@ -1,4 +1,4 @@
 interface:
   display_name: "BFF Locust GraphQL"
-  short_description: "生成和维护 BFF GraphQL 压测、冒烟与报告"
-  default_prompt: "使用 $bff-locust-graphql 为当前 BFF 项目新增或更新测试场景，并完成相应验证。"
+  short_description: "建立和维护 BFF GraphQL 压测、冒烟与报告"
+  default_prompt: "使用 $bff-locust-graphql 建立或维护当前 BFF 测试项目，并完成相应验证。"

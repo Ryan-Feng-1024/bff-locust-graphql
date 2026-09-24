@@ -4,6 +4,7 @@
 
 它帮助 Agent 在目标仓库已有架构内完成：
 
+- 从空目录规划并建立最小 BFF Locust GraphQL 测试项目
 - 新增或更新 BFF GraphQL 测试场景
 - 管理 Schema、GraphQL operation 和变量模板
 - 执行 Locust 冒烟、性能测试与报告检查
@@ -56,6 +57,7 @@ $bff-locust-graphql 为当前 BFF 项目新增 TenantQuotaUsageDetail 场景，�
 入口文件 [SKILL.md](SKILL.md) 只保留共享约束和工作流路由。详细流程按需加载：
 
 - `references/project-discovery.md`：项目能力发现与适配
+- `references/new-project-bootstrap.md`：空目录问答、参考项目选择与分阶段建置
 - `references/scenario-authoring.md`：场景新增和更新
 - `references/graphql-assets.md`：Schema 与 GraphQL 资产
 - `references/execution-and-reporting.md`：冒烟、压测和报告

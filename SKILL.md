@@ -1,11 +1,11 @@
 ---
 name: bff-locust-graphql
-description: "为采用 Locust 与 GraphQL 的 BFF 测试项目新增或更新场景，管理 Schema 与 operation 资产，执行冒烟、性能测试、报告和故障诊断。当用户需要维护此类 BFF 测试项目或把相同能力接入新项目时调用。"
+description: "从空目录建立或在现有仓库维护采用 Locust 与 GraphQL 的 BFF 测试项目，管理 Schema、场景、冒烟、性能测试、报告和故障诊断。当用户需要新建、迁移或维护此类项目时调用。"
 ---
 
 # BFF Locust GraphQL
 
-在目标仓库现有架构内完成 BFF GraphQL 测试工作。先发现项目约定，再选择工作流；不要把任一参考项目的类名、目录、tag、profile 或业务链路当成所有项目的固定标准。
+完成 BFF GraphQL 测试项目的初始化、适配和维护。现有仓库以其架构为准；空目录先定义最小项目契约，再建立可验证骨架。不要把任一参考项目的类名、目录、tag、profile 或业务链路当成所有项目的固定标准。
 
 ## 开始前
 
@@ -15,10 +15,11 @@ description: "为采用 Locust 与 GraphQL 的 BFF 测试项目新增或更新�
 4. 以目标仓库当前代码、配置和生成器为事实来源。文档与实现冲突时，查清差异并在交付中说明。
 5. 任何访问真实 BFF 或初始化账号池的操作，都先确认项目要求的运行时 profile、环境和凭据来源。不得从文件存在推断 profile 已加载，也不得把仅覆盖 URL 当成完整运行时配置。
 
-首次接触仓库、接入新项目或无法确定入口时，先读 [references/project-discovery.md](references/project-discovery.md)。
+首次接触仓库、接入新项目或无法确定入口时，先读 [references/project-discovery.md](references/project-discovery.md)。确认目标是空目录或尚无可运行框架时，再读 [references/new-project-bootstrap.md](references/new-project-bootstrap.md)。
 
 ## 工作流路由
 
+- 从空目录建立或从其他 BFF 框架迁移新项目：读 [references/new-project-bootstrap.md](references/new-project-bootstrap.md)，再按需读取 Schema、场景和验证工作流。
 - 新增、迁移或修改 Locust 场景：读 [references/scenario-authoring.md](references/scenario-authoring.md)，涉及 GraphQL operation 时再读 [references/graphql-assets.md](references/graphql-assets.md)。
 - 生成、同步或审查 Schema、`.graphql`、变量模板：读 [references/graphql-assets.md](references/graphql-assets.md)。
 - 运行冒烟、压测或生成报告：读 [references/execution-and-reporting.md](references/execution-and-reporting.md)。
@@ -51,3 +52,4 @@ description: "为采用 Locust 与 GraphQL 的 BFF 测试项目新增或更新�
 - “跑一下该 tag 的 30 秒冒烟并生成报告。”
 - “分析为什么报告里没有目标业务请求。”
 - “把现有 BFF 压测框架适配到另一个类似服务。”
+- “当前是空目录，请通过问答建立一个新的 BFF Locust GraphQL 测试项目。”
