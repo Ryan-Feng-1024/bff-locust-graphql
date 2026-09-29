@@ -1,5 +1,7 @@
 # 冒烟、性能测试与报告
 
+命令行、Locust UI 和性能 wrapper 的统一入口契约见 [locust-entrypoint-and-usage.md](locust-entrypoint-and-usage.md)。本文件关注执行目的、判定和报告证据；具体项目仍以自身 profile、catalog 和阈值为准。
+
 ## 先判断运行目的
 
 | 目的 | 推荐入口 |
@@ -15,7 +17,7 @@ pytest/headless 可以缩短反馈，但不能替代项目规定的正式 Locust
 
 ## 执行前
 
-1. 通过项目脚本或 catalog 把用户输入解析为准确 tag，不依赖大小写或命名猜测。
+1. 通过统一入口、项目脚本或 catalog 把用户输入解析为准确 tag，不依赖大小写或命名猜测。
 2. 显式选择运行时 profile，确认 endpoint、账号池容量、客户端模式和数据权限。
 3. 确认场景执行策略。破坏性、一次性和数据依赖场景不得默认并入 regular smoke。
 4. 确认用户数、spawn rate、运行时长、等待模型和输出目录。
@@ -34,6 +36,7 @@ pytest/headless 可以缩短反馈，但不能替代项目规定的正式 Locust
 ## 性能判定
 
 - 使用原始业务场景和项目正式 wait/workload profile，不以 validity 场景形成性能结论。
+- 直接 Locust 命令和 performance wrapper 应使用同一 `--scenarios`/runtime profile 契约；不要仅因为是性能运行就换成另一套 User Class 选择方式。
 - 记录 users、spawn rate、运行时间、等待模型、profile、客户端入口和目标环境。
 - 依据项目 threshold/tier 评估目标请求，而不是只看 aggregated 行。
 - 与基线比较时保持环境、数据规模和负载模型可比；不把网络波动或环境异常直接归因于代码回退。

@@ -58,6 +58,7 @@ $bff-locust-graphql 为当前 BFF 项目新增 TenantQuotaUsageDetail 场景，�
 
 - `references/project-discovery.md`：项目能力发现与适配
 - `references/new-project-bootstrap.md`：空目录问答、参考项目选择与分阶段建置
+- `references/locust-entrypoint-and-usage.md`：统一 Locust 入口、CLI 参数、Web UI 场景选择与性能用法
 - `references/scenario-authoring.md`：场景新增和更新
 - `references/graphql-assets.md`：Schema 与 GraphQL 资产
 - `references/execution-and-reporting.md`：冒烟、压测和报告

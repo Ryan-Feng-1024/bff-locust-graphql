@@ -22,6 +22,7 @@ description: "从空目录建立或在现有仓库维护采用 Locust 与 GraphQ
 - 从空目录建立或从其他 BFF 框架迁移新项目：读 [references/new-project-bootstrap.md](references/new-project-bootstrap.md)，再按需读取 Schema、场景和验证工作流。
 - 新增、迁移或修改 Locust 场景：读 [references/scenario-authoring.md](references/scenario-authoring.md)，涉及 GraphQL operation 时再读 [references/graphql-assets.md](references/graphql-assets.md)。
 - 生成、同步或审查 Schema、`.graphql`、变量模板：读 [references/graphql-assets.md](references/graphql-assets.md)。
+- 设计或统一 Locust 启动入口、CLI 参数、Web UI 场景选择或性能用法：读 [references/locust-entrypoint-and-usage.md](references/locust-entrypoint-and-usage.md)。
 - 运行冒烟、压测或生成报告：读 [references/execution-and-reporting.md](references/execution-and-reporting.md)。
 - 排查接口、认证、场景注册、数据或报告失败：读 [references/troubleshooting.md](references/troubleshooting.md)。
 - 完成代码变更、选择回归范围或交付前检查：读 [references/verification.md](references/verification.md)。

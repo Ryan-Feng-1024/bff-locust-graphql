@@ -2,6 +2,14 @@
 
 本项目遵循 [Semantic Versioning](https://semver.org/)。
 
+## [0.3.0] - 2026-09-29
+
+### Added
+
+- 增加统一 Locust 入口、`--scenarios`、runtime profile、Web UI 和性能用法约定。
+- 明确新项目的 tag/operation/primary request 边界、用户类过滤时序和命令生成一致性要求。
+- 将统一入口 reference 接入新项目建置、执行报告和 Skill 文档路由。
+
 ## [0.2.0] - 2026-09-24
 
 ### Added

@@ -46,7 +46,7 @@
 
 ### 阶段 2：离线骨架
 
-创建能运行静态验证的最小结构，通常包括依赖入口、Locust 入口、GraphQL client、统一 session/runtime state、profile loader、场景注册、测试和必要文档。只有目标需要时才引入 catalog、报告、容器与 CI；不要为了与大型参考仓库外观一致而复制全部能力。
+创建能运行静态验证的最小结构，通常包括依赖入口、Locust 入口、GraphQL client、统一 session/runtime state、profile loader、场景注册、测试和必要文档。涉及 Locust 时，按 [locust-entrypoint-and-usage.md](locust-entrypoint-and-usage.md) 建立统一的入口、`--scenarios`、runtime profile 和 Web UI/性能用法。只有目标需要时才引入 catalog、报告、容器与 CI；不要为了与大型参考仓库外观一致而复制全部能力。
 
 运行时配置至少区分：
 
@@ -82,7 +82,7 @@
 1. 文件结构、配置解析、单测、lint/typecheck；
 2. 本地 Schema 解析、生成器和 drift；
 3. 真实 Schema 同步；
-4. 单用户、单 tag、短时 Locust 冒烟；
+4. 使用统一入口执行单用户、单 tag、短时 Locust 冒烟；
 5. 报告主请求与失败分类；
 6. 经明确授权的性能负载。
 
@@ -92,7 +92,7 @@
 
 交付必须按阶段说明状态：
 
-- **已建立**：骨架、配置模型、GraphQL 资产管理、场景注册和测试入口实际存在且可运行；
+- **已建立**：骨架、配置模型、GraphQL 资产管理、场景注册和测试入口实际存在且可运行；若范围包含 Locust，还要能用统一入口和 tag 参数启动；
 - **已离线验证**：明确列出静态、单测、类型和本地契约结果；
 - **已连接 live Schema**：说明环境和 profile，不泄露凭据；
 - **已真实冒烟**：目标业务请求存在，Locust failure、GraphQL errors 与业务失败均符合预期；
